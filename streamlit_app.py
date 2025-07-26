@@ -306,12 +306,14 @@ elif page == "Sample Questions":
     
     # Category selector
     category = st.selectbox(
-        "Choose category:",
-        ["exam", "lesson"]
+        "Choose subject:",
+        ["Mathematics", "Physics", "Chemistry", "Biology", "Arabic"]
     )
     
     samples = {
-        "Mathematics": """id: 3001
+"Mathematics": 
+"""
+id: 3001
 language: en
 category: exam
 type: mcq
@@ -320,10 +322,10 @@ type: mcq
 Solve for x: `x^2 - 5x + 6 = 0`
 
 [CHOICES]
--x = 1, 6
-*x = 2, 3
--x = -2, -3
--x = 0, 5
+-``x = 1, 6``
+*``x = 2, 3``
+-``x = -2, -3``
+-``x = 0, 5``
 ---
 id: 3002
 language: en
@@ -331,39 +333,45 @@ category: exam
 type: input_box
 
 [STEM]
-Calculate the area of a circle with radius 5 cm. Use `π = 3.14`
+Calculate the area of a circle with radius 5 cm. Use `\pi = 3.14`
 
 [ANSWER]
-78.5 | cm²""",
+78.5 | ``cm^2``
+""",
         
-        "Physics": """id: 4001
+"Physics": 
+"""
+id: 4001
 language: en
-category: physics
+category: exam
 type: mcq
 
 [STEM]
 According to Ohm's law ``V = IR``, if voltage is 12V and current is 3A, what is the resistance?
 
 [CHOICES]
-36 Ω
-9 Ω
-*4 Ω
-15 Ω
+-``36 \Omega``
+-``9 \Omega``
+*``4 \Omega``
+-``15 \Omega``
 ---
 id: 4002
 language: en
-category: physics
+category: exam
 type: string
 
 [STEM]
 What is the unit of electric power?
 
 [ANSWER]
-Watt (W)""",
+Watt (W)
+""",
         
-        "Chemistry": """id: 5001
+"Chemistry": 
+"""
+id: 5001
 language: en
-category: chemistry
+category: exam
 type: matching
 
 [STEM]
@@ -373,11 +381,14 @@ Match the chemical symbols with their elements:
 H | Hydrogen
 O | Oxygen
 C | Carbon
-N | Nitrogen""",
-        
-        "Biology": """id: 6001
+N | Nitrogen
+""",
+      
+"Biology":
+"""
+id: 6001
 language: en
-category: biology
+category: exam
 type: gapText
 
 [STEM]
@@ -385,11 +396,14 @@ Photosynthesis occurs in the [BLANK] of plant cells and produces [BLANK] and oxy
 
 [GAPS]
 chloroplasts
-glucose""",
+glucose
+""",
         
-        "Language": """id: 7001
+"Arabic": 
+"""
+id: 7001
 language: ar
-category: arabic
+category: exam
 type: mcq
 
 [STEM]
@@ -397,9 +411,10 @@ type: mcq
 
 [CHOICES]
 *كتب
-كتاب
-كتابات
-كتابان"""
+-كتاب
+-كتابات
+-كتابان
+"""
     }
     
     if category in samples:
