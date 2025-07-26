@@ -53,7 +53,7 @@ if page == "Question Processor":
                 height=400,
                 placeholder="""id: 1001
 language: en
-category: math
+category: exam
 type: mcq
 
 [STEM]
@@ -67,11 +67,11 @@ What is 2 + 2?
 ---
 id: 1002
 language: en
-category: science
+category: lesson
 type: string
 
 [STEM]
-What is H2O?
+What is `H_2O`?
 
 [ANSWER]
 Water"""
@@ -261,7 +261,7 @@ elif page == "Structure Guide":
         ```
         id: 1001
         language: en
-        category: math
+        category: exam
         type: mcq
         
         [STEM]
@@ -269,28 +269,28 @@ elif page == "Structure Guide":
         
         [CHOICES]
         *8
-        6
-        9
-        4
+        -6
+        -9
+        -4
         ```
         
         ### Multi-part Question
         ```
         id: 2001
         language: en
-        category: physics
+        category: exam
         
         [STATEMENT]
         A ball is thrown upward with initial velocity 20 m/s.
-        
+
         [PART]
         type: mcq
         [STEM]
         What is the maximum height?
         [CHOICES]
         *20.4 m
-        15.3 m
-        25.1 m
+        -15.3 m
+        -25.1 m
         
         [PART]
         type: input_box
@@ -307,27 +307,27 @@ elif page == "Sample Questions":
     # Category selector
     category = st.selectbox(
         "Choose category:",
-        ["Mathematics", "Physics", "Chemistry", "Biology", "Language"]
+        ["exam", "lesson"]
     )
     
     samples = {
         "Mathematics": """id: 3001
 language: en
-category: mathematics
+category: exam
 type: mcq
 
 [STEM]
 Solve for x: `x^2 - 5x + 6 = 0`
 
 [CHOICES]
-x = 1, 6
+-x = 1, 6
 *x = 2, 3
-x = -2, -3
-x = 0, 5
+-x = -2, -3
+-x = 0, 5
 ---
 id: 3002
 language: en
-category: mathematics
+category: exam
 type: input_box
 
 [STEM]
