@@ -350,10 +350,10 @@ type: mcq
 According to Ohm's law ``V = IR``, if voltage is 12V and current is 3A, what is the resistance?
 
 [CHOICES]
--``36 \Omega``
--``9 \Omega``
-*``4 \Omega``
--``15 \Omega``
+`36 \Omega`
+`9 \Omega`
+*`4 \Omega`
+`15 \Omega`
 ---
 id: 4002
 language: en
