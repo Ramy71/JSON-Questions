@@ -158,6 +158,9 @@ class QuestionProcessor:
         
         try:
             direction = ' dir="rtl"' if language == Language.ARABIC else ''
+            blank_html = '<span data-node-type="blank-line" data-node-variation="space">&nbsp;</span>'
+            processed_text = text.replace("_____", blank_html)
+
                         
             # Enhanced regex for math segments with better validation
             math_pattern = r'(``[^`]*``|`[^`]*`)'
@@ -184,9 +187,6 @@ class QuestionProcessor:
                 # Handle plain text
                 else:
                                 # Handle visual blanks
-                    blank_html = '<span data-node-type="blank-line" data-node-variation="space">&nbsp;</span>'
-                    processed_text = text.replace("_____", blank_html)
-
                     # Better HTML escaping for text content
                     escaped_text = (part
                                   .replace('&', '&amp;')
