@@ -22,7 +22,7 @@ st.set_page_config(
 st.title("📝 Educational Question Processor")
 st.markdown("""
 Convert your educational content into structured JSON format with support for:
-- Multiple question types (MCQ, String, Gap Text, etc.)
+- Multiple question types (MCQ, FRQ_ai, String, Gap Text, etc.)
 - Arabic and English languages
 - Math LaTeX formatting
 - Bulk processing
